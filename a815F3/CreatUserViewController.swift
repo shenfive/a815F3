@@ -41,7 +41,12 @@ class CreatUserViewController: UIViewController {
             if let error = error {
                 
             }else{
-                self.navigationController?.popViewController(animated: true)
+                let alert = UIAlertController(title: "建立成功", message: "", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+                    self.navigationController?.popViewController(animated: true)
+                }))
+                self.present(alert, animated: true, completion: nil)
+
             }
             
             
@@ -59,12 +64,8 @@ class CreatUserViewController: UIViewController {
     
     @IBAction func secTouchUpInside(_ sender: Any) {
         password1TF.isSecureTextEntry = true
-        password2TF.isSecureTextEntry = true
+        password1TF.isSecureTextEntry = false
     }
-    
-    
-    
-
 }
 
 extension UIViewController{
