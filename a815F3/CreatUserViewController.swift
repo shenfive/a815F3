@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class CreatUserViewController: UIViewController {
 
@@ -31,6 +32,20 @@ class CreatUserViewController: UIViewController {
             showMsg(msg: "兩次密碼不一致")
             return
         }
+        
+        
+        Auth.auth().createUser(withEmail: email, password: password1) { result, error in
+            print(error)
+            print(result)
+            if let error = error {
+                
+            }else{
+                self.navigationController?.popViewController(animated: true)
+            }
+            
+            
+        }
+        
         
         
         
