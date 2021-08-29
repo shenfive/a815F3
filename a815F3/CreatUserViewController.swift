@@ -28,6 +28,7 @@ class CreatUserViewController: UIViewController {
             return
         }
         
+        
         if password1 != password2{
             showMsg(msg: "兩次密碼不一致")
             return
@@ -46,10 +47,23 @@ class CreatUserViewController: UIViewController {
             
         }
         
-        
+    
         
         
     }
+    
+    @IBAction func secDown(_ sender: Any) {
+        password1TF.isSecureTextEntry = false
+        password2TF.isSecureTextEntry = false
+    }
+    
+    @IBAction func secTouchUpInside(_ sender: Any) {
+        password1TF.isSecureTextEntry = true
+        password2TF.isSecureTextEntry = true
+    }
+    
+    
+    
 
 }
 
@@ -59,5 +73,12 @@ extension UIViewController{
         alert.addAction(UIAlertAction(title: "我知道了", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
+    
+    
+    
+    
+    
+    
+    
 }
 

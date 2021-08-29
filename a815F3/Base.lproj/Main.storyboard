@@ -71,6 +71,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="alphabet" secureTextEntry="YES" textContentType="password"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X9q-yX-Mo9">
+                                <rect key="frame" x="55" y="305" width="115" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="secDown:" destination="grH-Fn-ydE" eventType="touchDown" id="ydL-4e-HmR"/>
+                                    <action selector="secTouchUpInside:" destination="grH-Fn-ydE" eventType="touchUpInside" id="BtL-Di-fvv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ApT-S2-1rS"/>
                         <color key="backgroundColor" systemColor="systemYellowColor"/>
